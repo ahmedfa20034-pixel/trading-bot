@@ -1,0 +1,56 @@
+{
+  "mt5": {
+    "account": 123456,
+    "password": "your_password",
+    "server": "MetaQuotes-Demo",
+    "path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe"
+  },
+  "trading": {
+    "symbols": ["EURUSD", "GBPUSD", "USDJPY", "AUDUSD"],
+    "timeframe": "H1",
+    "risk_per_trade": 0.02,
+    "max_positions": 5,
+    "max_drawdown": 0.15
+  },
+  "strategies": {
+    "default": "rsi_strategy",
+    "rsi": {
+      "period": 14,
+      "oversold": 30,
+      "overbought": 70
+    },
+    "macd": {
+      "fast": 12,
+      "slow": 26,
+      "signal": 9
+    },
+    "bollinger": {
+      "period": 20,
+      "std_dev": 2
+    }
+  },
+  "risk_management": {
+    "stop_loss_pips": 50,
+    "take_profit_pips": 100,
+    "trailing_stop": true,
+    "trailing_step": 20
+  },
+  "notifications": {
+    "email": {
+      "enabled": true,
+      "sender": "your_email@gmail.com",
+      "password": "your_app_password",
+      "recipients": ["your_email@gmail.com"]
+    },
+    "telegram": {
+      "enabled": true,
+      "token": "YOUR_BOT_TOKEN",
+      "chat_id": "YOUR_CHAT_ID"
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/trading_bot.log",
+    "max_size_mb": 100
+  }
+}
